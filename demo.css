@@ -1,0 +1,313 @@
+/* Demo Page Specific Styles */
+
+.active-demo {
+    background-color: var(--hoverColor);
+    color: #fff !important;
+  }
+  
+  .demo-area {
+    flex: 1;
+    padding: 3rem 0;
+  }
+  
+  .demo-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .demo-title {
+    font-size: 2.2rem;
+    color: var(--darkOne);
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .demo-subtitle {
+    color: var(--lightOne);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  
+  .demo-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+  
+  .input-section,
+  .output-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .symptom-input,
+  .image-input,
+  .analysis-output,
+  .diagnosis-output {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .symptom-input label,
+  .image-input label,
+  .analysis-output label,
+  .diagnosis-output label {
+    color: var(--darkTwo);
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+  }
+  
+  .symptom-input textarea {
+    padding: 1rem;
+    border: 2px solid rgba(76, 175, 80, 0.2);
+    border-radius: 12px;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.95rem;
+    color: var(--darkOne);
+    background-color: var(--backgroundColor);
+    resize: vertical;
+    min-height: 120px;
+    transition: 0.3s;
+  }
+  
+  .symptom-input textarea:focus {
+    outline: none;
+    border-color: var(--mainColor);
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+  }
+  
+  .symptom-input textarea::placeholder {
+    color: var(--lightOne);
+  }
+  
+  .upload-area {
+    border: 2px dashed rgba(76, 175, 80, 0.3);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: var(--backgroundColor);
+  }
+  
+  .upload-area:hover {
+    border-color: var(--mainColor);
+    background-color: rgba(76, 175, 80, 0.05);
+  }
+  
+  .upload-area.dragover {
+    border-color: var(--mainColor);
+    background-color: rgba(76, 175, 80, 0.1);
+  }
+  
+  .upload-content {
+    pointer-events: none;
+  }
+  
+  .upload-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .upload-area p {
+    color: var(--darkOne);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+  
+  .file-types {
+    color: var(--lightOne);
+    font-size: 0.85rem;
+  }
+  
+  .image-preview {
+    margin-top: 1rem;
+    display: none;
+  }
+  
+  .image-preview.show {
+    display: block;
+  }
+  
+  .preview-image {
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .remove-image {
+    background: var(--mainColor);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    transition: 0.3s;
+  }
+  
+  .remove-image:hover {
+    background: var(--hoverColor);
+  }
+  
+  .analyze-btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  
+  .analyze-btn {
+    background: linear-gradient(135deg, var(--mainColor), var(--hoverColor));
+    color: white;
+    border: none;
+    padding: 1rem 2.5rem;
+    border-radius: 16px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+    min-width: 200px;
+  }
+  
+  .analyze-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(76, 175, 80, 0.3);
+  }
+  
+  .analyze-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+  }
+  
+  .btn-loader {
+    display: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid transparent;
+    border-top: 2px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+  }
+  
+  .analyze-btn.loading .btn-text {
+    display: none;
+  }
+  
+  .analyze-btn.loading .btn-loader {
+    display: block;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .output-field {
+    background-color: var(--backgroundColor);
+    border: 2px solid rgba(76, 175, 80, 0.2);
+    border-radius: 12px;
+    padding: 1.5rem;
+    min-height: 150px;
+    font-family: "Poppins", sans-serif;
+    color: var(--darkOne);
+    line-height: 1.6;
+  }
+  
+  .placeholder-text {
+    color: var(--lightOne);
+    font-style: italic;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-height: 120px;
+  }
+  
+  .output-field.has-content .placeholder-text {
+    display: none;
+  }
+  
+  .analysis-result,
+  .diagnosis-result {
+    color: var(--darkOne);
+    line-height: 1.7;
+  }
+  
+  .diagnosis-result {
+    background: rgba(76, 175, 80, 0.1);
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--mainColor);
+  }
+  
+  .warning-text {
+    background: rgba(255, 193, 7, 0.1);
+    color: #856404;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    border-left: 4px solid #ffc107;
+    font-size: 0.9rem;
+  }
+  
+  .dark .warning-text {
+    background: rgba(255, 193, 7, 0.15);
+    color: #fff3cd;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 870px) {
+    .demo-content {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    
+    .demo-title {
+      font-size: 1.8rem;
+    }
+    
+    .demo-subtitle {
+      font-size: 1rem;
+    }
+    
+    .analyze-btn {
+      padding: 0.9rem 2rem;
+      font-size: 1rem;
+    }
+  }
+  
+  @media screen and (max-width: 470px) {
+    .demo-area {
+      padding: 2rem 0;
+    }
+    
+    .demo-title {
+      font-size: 1.5rem;
+    }
+    
+    .demo-subtitle {
+      font-size: 0.95rem;
+    }
+    
+    .upload-area {
+      padding: 1.5rem;
+    }
+    
+    .analyze-btn {
+      padding: 0.8rem 1.5rem;
+      font-size: 0.95rem;
+      min-width: 160px;
+    }
+  }

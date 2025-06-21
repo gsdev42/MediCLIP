@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MediCLIP Demo - Medical Analysis</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="demo.css" />
+  </head>
+  <body>
+    <main>
+      <div class="big-wrapper light">
+        <div class="medical-shape"></div>
+        <header>
+          <div class="container">
+            <div class="logo">
+              <div class="logo-icon">M+</div>
+              <h3>MediCLIP</h3>
+            </div>
+            <div class="links">
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Research</a></li>
+                <li><a href="#" class="btn active-demo">Demo</a></li>
+              </ul>
+            </div>
+            <div class="overlay"></div>
+            <div class="hamburger-menu">
+              <div class="bar"></div>
+            </div>
+          </div>
+        </header>
+        <div class="demo-area">
+          <div class="container">
+            <div class="demo-header">
+              <h1 class="demo-title">Medical Analysis Demo</h1>
+              <p class="demo-subtitle">
+                Describe your symptoms and upload an image for AI-powered medical analysis
+              </p>
+            </div>
+            <div class="demo-content">
+              <div class="input-section">
+                <div class="symptom-input">
+                  <label for="symptoms">Describe Your Symptoms</label>
+                  <textarea 
+                    id="symptoms" 
+                    placeholder="Please describe your symptoms in detail (e.g., pain location, duration, intensity, any visible changes...)"
+                    rows="6"
+                  ></textarea>
+                </div>
+                <div class="image-input">
+                  <label for="medical-image">Upload Medical Image (Optional)</label>
+                  <div class="upload-area" id="upload-area">
+                    <div class="upload-content">
+                      <div class="upload-icon">📷</div>
+                      <p>Drag and drop an image here or click to browse</p>
+                      <span class="file-types">Supported: JPG, PNG, GIF</span>
+                    </div>
+                    <input type="file" id="medical-image" accept="image/*" hidden />
+                  </div>
+                  <div class="image-preview" id="image-preview"></div>
+                </div>
+                <div class="analyze-btn-container">
+                  <button class="analyze-btn" id="analyze-btn">
+                    <span class="btn-text">Analyze Condition</span>
+                    <div class="btn-loader"></div>
+                  </button>
+                </div>
+              </div>
+              <div class="output-section">
+                <div class="analysis-output">
+                  <label>AI Analysis Output</label>
+                  <div class="output-field" id="analysis-output">
+                    <div class="placeholder-text">
+                      Your detailed medical analysis will appear here after processing your symptoms and image...
+                    </div>
+                  </div>
+                </div>
+                <div class="diagnosis-output">
+                  <label>Possible Diagnosis</label>
+                  <div class="output-field" id="diagnosis-output">
+                    <div class="placeholder-text">
+                      Potential medical conditions and recommendations will be displayed here...
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-area">
+          <div class="container">
+            <button class="toggle-btn">
+              <i class="far fa-moon"></i>
+              <i class="far fa-sun"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- JavaScript Files -->
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <script src="./app.js"></script>
+    <script src="./demo.js"></script>
+  </body>
+</html>
